@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.source="https://github.com/ich777/docker-lunamult
 RUN apt-get update && apt-get -y install --no-install-recommends wget apt-transport-https && \
 	wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O /tmp/packages-microsoft-prod.deb && \
 	dpkg -i /tmp/packages-microsoft-prod.deb && apt-get update && \
-	apt-get -y install --no-install-recommends aspnetcore-runtime-5.0 jq unzip && \
+	apt-get -y install --no-install-recommends aspnetcore-runtime-6.0 jq unzip && \
 	apt-get -y remove apt-transport-https && \
 	apt-get -y autoremove && \
 	rm -rf /var/lib/apt/lists/* /tmp/packages-microsoft-prod.deb
